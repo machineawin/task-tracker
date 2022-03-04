@@ -29,7 +29,8 @@ const App = () => {
   //Add Task
   const addTask = (task) => {
     const id = Math.floor(Math.random() * 10000) +1; //create random ID as we aren't using a back end
-    console.log (id);
+    const newTask = {id, ...task}
+    setTasks ([...tasks, newTask])
   }
 
 
