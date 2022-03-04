@@ -8,19 +8,19 @@ const App = () => {
     {
         id:1,
         text: 'Doctors',
-        time: 'Feb 5th at 2:30pm',
+        day: 'Feb 5th at 2:30pm',
         reminder: true
     },
     {
         id:2,
         text: 'Dentists',
-        time: 'Mar 5th at 3:30pm',
+        day: 'Mar 5th at 3:30pm',
         reminder: false,
     },
     {
         id:3,
         text: 'Nurses',
-        time: 'Apr 5th at 4:30pm',
+        day: 'Apr 5th at 4:30pm',
         reminder: true
         },
 
@@ -31,6 +31,7 @@ const App = () => {
     const id = Math.floor(Math.random() * 10000) +1; //create random ID as we aren't using a back end
     const newTask = {id, ...task}
     setTasks ([...tasks, newTask])
+    console.log ('tasks', tasks);
   }
 
 
